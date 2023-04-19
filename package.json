@@ -1,0 +1,28 @@
+{
+  "name": "final-project-merrhaile",
+  "version": "1.0.0",
+  "description": "# msd-2022-spring-cs477-final-project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maharishi-university/final-project-merrhaile.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maharishi-university/final-project-merrhaile/issues"
+  },
+  "homepage": "https://github.com/maharishi-university/final-project-merrhaile#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.5",
+    "nodemon": "^2.0.15"
+  }
+}

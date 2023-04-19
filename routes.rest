@@ -1,0 +1,128 @@
+
+GET http://localhost:3000/rooms
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmMGY2MmI5MWY2NWNjNDc5YzA4ZGEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2ODE4ODEwMjUsImV4cCI6MTY4MTg4NDYyNX0.p0gIQ6o9F1glBTwmL6rJQqydO2KyX0u915iBhf0E6zQ
+
+###
+
+
+POST http://localhost:3000/rooms
+Content-Type: application/json
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmMGY2MmI5MWY2NWNjNDc5YzA4ZGEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2ODE4ODEwMjUsImV4cCI6MTY4MTg4NDYyNX0.p0gIQ6o9F1glBTwmL6rJQqydO2KyX0u915iBhf0E6zQ
+
+{
+    "code" : "V5120",
+    "slots" : [
+        {
+            "number": 1 ,
+            "status": "available"
+        },
+        {
+            "number": 2 ,
+            "status": "available"
+        }
+    ]
+}
+
+###
+
+POST http://localhost:3000/rooms/request-room
+Content-Type: application/json
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmMGZhMWI5MWY2NWNjNDc5YzA4ZGUiLCJyb2xlIjoidXNlciIsImlhdCI6MTY4MTg3NzU5NCwiZXhwIjoxNjgxODgxMTk0fQ.D4l8eh7vbyA6OHCDuEddy9SAHv0XdVttYTPOzukRGkY
+
+{
+    "code":"V51",
+    "slot": 2,
+    "status": "completed"
+}
+
+###
+
+GET http://localhost:3000/rooms
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmMGY2MmI5MWY2NWNjNDc5YzA4ZGEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2ODE4NzkyNDQsImV4cCI6MTY4MTg4Mjg0NH0.soPjeDTslVFZ85D3O_OWCwooQSiaQ8l_mCkFtSEjH04
+
+###
+
+GET http://localhost:3000/rooms/643f70de15bd55439a34e44a
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmMGY2MmI5MWY2NWNjNDc5YzA4ZGEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2ODE4NzkyNDQsImV4cCI6MTY4MTg4Mjg0NH0.soPjeDTslVFZ85D3O_OWCwooQSiaQ8l_mCkFtSEjH04
+
+###
+
+PUT http://localhost:3000/rooms/643f70de15bd55439a34e44a
+Content-Type: application/json
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmMGY2MmI5MWY2NWNjNDc5YzA4ZGEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2ODE4NzkyNDQsImV4cCI6MTY4MTg4Mjg0NH0.soPjeDTslVFZ85D3O_OWCwooQSiaQ8l_mCkFtSEjH04
+
+{
+    "code" : "V5120",
+    "slots" : [
+        {
+            "number": 1 ,
+            "status": "available"
+        },
+        {
+            "number": 2 ,
+            "status": "available"
+        },
+        {
+            "number": 3 ,
+            "status": "available"
+        }
+    ]
+}
+
+
+###
+
+DELETE http://localhost:3000/rooms/643f70de15bd55439a34e44a
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmMGY2MmI5MWY2NWNjNDc5YzA4ZGEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2ODE4NzkyNDQsImV4cCI6MTY4MTg4Mjg0NH0.soPjeDTslVFZ85D3O_OWCwooQSiaQ8l_mCkFtSEjH04
+
+
+###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "code" : 4,
+    "username" : "user4",
+    "password": "1234",
+    "role" : "user"
+}
+
+###
+
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "username" : "admin1",
+    "password": "1234"
+}
+
+
+###
+GET http://localhost:3000/users
+
+
+
+###
+
+GET http://localhost:3000/users/643f1b3255c59f86209f166f
+
+###
+
+PUT http://localhost:3000/users/643f1b3255c59f86209f166f
+Content-Type: application/json
+
+{
+     "code" : 4,
+    "username" : "userSample",
+    "password": "1234",
+    "role" : "user"
+}
+
+
+###
+
+DELETE http://localhost:3000/users/643f1b3255c59f86209f166f
+
+###
